@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Community Empowerment Foundation</title>
+    <link rel="stylesheet" href="/styles/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Empower Foundation</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Toggle mobile menu">☰</button>
+    </header>
+
+    <!-- Events Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Upcoming Events</h1>
+            <p>Join us for inspiring gatherings, workshops, and community activities that drive positive change</p>
+        </div>
+    </section>
+
+    <!-- Events Filter & Search -->
+    <section class="container">
+        <div class="events-controls">
+            <div class="events-search">
+                <input type="text" id="eventsSearch" placeholder="Search events...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="events-filters">
+                <select id="eventCategory">
+                    <option value="all">All Categories</option>
+                    <option value="workshop">Workshops</option>
+                    <option value="fundraiser">Fundraisers</option>
+                    <option value="community">Community Events</option>
+                    <option value="conference">Conferences</option>
+                    <option value="volunteer">Volunteer Events</option>
+                </select>
+                <select id="eventDate">
+                    <option value="all">All Dates</option>
+                    <option value="upcoming">Upcoming</option>
+                    <option value="this-week">This Week</option>
+                    <option value="this-month">This Month</option>
+                    <option value="past">Past Events</option>
+                </select>
+                <select id="eventLocation">
+                    <option value="all">All Locations</option>
+                    <option value="online">Online</option>
+                    <option value="new-york">New York</option>
+                    <option value="los-angeles">Los Angeles</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="miami">Miami</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Event -->
+    <section class="container">
+        <div class="featured-event">
+            <div class="featured-badge">Featured Event</div>
+            <div class="featured-event-content">
+                <div class="featured-event-info">
+                    <h2>Annual Empowerment Gala 2024</h2>
+                    <p class="event-date">📅 March 15, 2024 | 6:00 PM - 10:00 PM</p>
+                    <p class="event-location">📍 Grand Ballroom, New York City</p>
+                    <p class="event-description">Join us for an unforgettable evening of inspiration and impact. Our
+                        annual gala brings together community leaders, philanthropists, and change-makers to celebrate
+                        our achievements and raise funds for youth education programs.</p>
+                    <div class="event-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">🎤</span>
+                            <span>Keynote by Dr. Sarah Chen</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">🎭</span>
+                            <span>Cultural Performances</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">🏆</span>
+                            <span>Community Impact Awards</span>
+                        </div>
+                    </div>
+                    <div class="event-stats">
+                        <div class="stat">
+                            <strong>250+</strong>
+                            <span>Attendees</span>
+                        </div>
+                        <div class="stat">
+                            <strong>$50K</strong>
+                            <span>Fundraising Goal</span>
+                        </div>
+                        <div class="stat">
+                            <strong>85%</strong>
+                            <span>Sold Out</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn primary-btn">Get Tickets</button>
+                        <button class="btn secondary-btn">Learn More</button>
+                        <button class="btn outline-btn" id="shareEvent">Share Event</button>
+                    </div>
+                </div>
+                <div class="featured-event-image">
+                    <img src="https://placehold.co/500x350/eef3f8/007BFF?text=Empowerment+Gala"
+                        alt="Annual Empowerment Gala">
+                    <div class="countdown-timer">
+                        <h4>Event Starts In:</h4>
+                        <div class="countdown" id="galaCountdown">
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="days">00</span>
+                                <span class="countdown-label">Days</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="hours">00</span>
+                                <span class="countdown-label">Hours</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="minutes">00</span>
+                                <span class="countdown-label">Minutes</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="seconds">00</span>
+                                <span class="countdown-label">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Calendar View -->
+    <section class="container">
+        <div class="calendar-section">
+            <h2>Events Calendar</h2>
+            <div class="calendar-controls">
+                <button class="calendar-nav" id="prevMonth">←</button>
+                <h3 id="currentMonth">March 2024</h3>
+                <button class="calendar-nav" id="nextMonth">→</button>
+            </div>
+            <div class="calendar" id="eventsCalendar">
+                <!-- Calendar will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Grid -->
+    <section class="container">
+        <h2>Upcoming Events</h2>
+        <div class="events-list" id="eventsContainer">
+            <!-- Event 1 -->
+            <div class="event-card" data-category="workshop" data-date="2024-03-10" data-location="online">
+                <div class="event-date">
+                    <span class="date-day">10</span>
+                    <span class="date-month">MAR</span>
+                </div>
+                <div class="event-content">
+                    <span class="event-category workshop">Workshop</span>
+                    <h3>Digital Skills for Entrepreneurs</h3>
+                    <p class="event-time">🕒 2:00 PM - 4:00 PM EST</p>
+                    <p class="event-location">📍 Online (Zoom)</p>
+                    <p class="event-description">Learn essential digital tools and strategies to grow your business in
+                        the digital age.</p>
+                    <div class="event-meta">
+                        <span class="attendees">👥 45 registered</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn small-btn">Register Now</button>
+                        <button class="btn small-btn outline-btn">Add to Calendar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-card" data-category="community" data-date="2024-03-12" data-location="new-york">
+                <div class="event-date">
+                    <span class="date-day">12</span>
+                    <span class="date-month">MAR</span>
+                </div>
+                <div class="event-content">
+                    <span class="event-category community">Community</span>
+                    <h3>Community Garden Planting Day</h3>
+                    <p class="event-time">🕒 9:00 AM - 12:00 PM EST</p>
+                    <p class="event-location">📍 Brooklyn Community Garden</p>
+                    <p class="event-description">Join fellow community members for a morning of gardening, networking,
+                        and sustainable living practices.</p>
+                    <div class="event-meta">
+                        <span class="attendees">👥 28 registered</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn small-btn">Volunteer</button>
+                        <button class="btn small-btn outline-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="event-card" data-category="fundraiser" data-date="2024-03-18" data-location="los-angeles">
+                <div class="event-date">
+                    <span class="date-day">18</span>
+                    <span class="date-month">MAR</span>
+                </div>
+                <div class="event-content">
+                    <span class="event-category fundraiser">Fundraiser</span>
+                    <h3>Youth Education Fund Run</h3>
+                    <p class="event-time">🕒 8:00 AM - 11:00 AM PST</p>
+                    <p class="event-location">📍 Griffith Park, Los Angeles</p>
+                    <p class="event-description">5K run/walk to support educational programs for underserved youth in
+                        Los Angeles.</p>
+                    <div class="event-meta">
+                        <span class="attendees">👥 120 registered</span>
+                        <span class="price">$35</span>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn small-btn">Register</button>
+                        <button class="btn small-btn outline-btn">Sponsor</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 4 -->
+            <div class="event-card" data-category="conference" data-date="2024-03-22" data-location="online">
+                <div class="event-date">
+                    <span class="date-day">22</span>
+                    <span class="date-month">MAR</span>
+                </div>
+                <div class="event-content">
+                    <span class="event-category conference">Conference</span>
+                    <h3>Women in Leadership Summit</h3>
+                    <p class="event-time">🕒 10:00 AM - 4:00 PM EST</p>
+                    <p class="event-location">📍 Online & Chicago Hub</p>
+                    <p class="event-description">Full-day virtual conference featuring successful women leaders sharing
+                        their journeys and insights.</p>
+                    <div class="event-meta">
+                        <span class="attendees">👥 89 registered</span>
+                        <span class="price">$75</span>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn small-btn">Get Tickets</button>
+                        <button class="btn small-btn outline-btn">View Agenda</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 5 -->
+            <div class="event-card" data-category="volunteer" data-date="2024-03-25" data-location="miami">
+                <div class="event-date">
+                    <span class="date-day">25</span>
+                    <span class="date-month">MAR</span>
+                </div>
+                <div class="event-content">
+                    <span class="event-category volunteer">Volunteer</span>
+                    <h3>Beach Cleanup Initiative</h3>
+                    <p class="event-time">🕒 9:00 AM - 12:00 PM EST</p>
+                    <p class="event-location">📍 South Beach, Miami</p>
+                    <p class="event-description">Help preserve our beautiful coastline while learning about marine
+                        conservation.</p>
+                    <div class="event-meta">
+                        <span class="attendees">👥 65 registered</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn small-btn">Join Cleanup</button>
+                        <button class="btn small-btn outline-btn">Invite Friends</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 6 -->
+            <div class="event-card" data-category="workshop" data-date="2024-03-30" data-location="online">
+                <div class="event-date">
+                    <span class="date-day">30</span>
+                    <span class="date-month">MAR</span>
+                </div>
+                <div class="event-content">
+                    <span class="event-category workshop">Workshop</span>
+                    <h3>Grant Writing Masterclass</h3>
+                    <p class="event-time">🕒 1:00 PM - 3:30 PM EST</p>
+                    <p class="event-location">📍 Online (Webinar)</p>
+                    <p class="event-description">Learn proven strategies for writing successful grant proposals from
+                        industry experts.</p>
+                    <div class="event-meta">
+                        <span class="attendees">👥 32 registered</span>
+                        <span class="price">$25</span>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn small-btn">Enroll Now</button>
+                        <button class="btn small-btn outline-btn">Save for Later</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Events -->
+        <div style="text-align: center; margin-top: 40px;">
+            <button id="loadMoreEvents" class="btn"
+                style="background-color: transparent; border: 2px solid #007BFF; color: #007BFF;">Load More
+                Events</button>
+        </div>
+    </section>
+
+    <!-- Past Events -->
+    <section class="impact-stats">
+        <div class="container">
+            <h2>Past Event Highlights</h2>
+            <div class="past-events">
+                <div class="past-event-card">
+                    <img src="https://placehold.co/300x200/eef3f8/007BFF?text=2023+Gala" alt="2023 Annual Gala">
+                    <div class="past-event-info">
+                        <h3>2023 Empowerment Gala</h3>
+                        <p class="event-stats">🎉 200+ Attendees | 💰 $45K Raised</p>
+                        <p class="event-impact">Funded 3 new community learning centers</p>
+                        <button class="btn small-btn">View Photos</button>
+                    </div>
+                </div>
+                <div class="past-event-card">
+                    <img src="https://placehold.co/300x200/eef3f8/007BFF?text=Youth+Summit"
+                        alt="Youth Leadership Summit">
+                    <div class="past-event-info">
+                        <h3>Youth Leadership Summit 2023</h3>
+                        <p class="event-stats">👥 150 Students | 🎯 12 Workshops</p>
+                        <p class="event-impact">Empowered next generation of leaders</p>
+                        <button class="btn small-btn">Watch Recap</button>
+                    </div>
+                </div>
+                <div class="past-event-card">
+                    <img src="https://placehold.co/300x200/eef3f8/007BFF?text=Health+Fair" alt="Community Health Fair">
+                    <div class="past-event-info">
+                        <h3>Community Health Fair</h3>
+                        <p class="event-stats">🏥 500+ Screened | 💊 1K+ Services</p>
+                        <p class="event-impact">Provided free health services to community</p>
+                        <button class="btn small-btn">See Impact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Hosting CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Host Your Own Event</h2>
+            <p>Want to organize an event to support our cause? We'll help you every step of the way.</p>
+            <div class="hosting-options">
+                <div class="hosting-option">
+                    <h4>Community Fundraiser</h4>
+                    <p>Organize a local event to raise funds and awareness</p>
+                    <button class="btn">Get Started</button>
+                </div>
+                <div class="hosting-option">
+                    <h4>Corporate Event</h4>
+                    <p>Partner with your company for team-building events</p>
+                    <button class="btn">Learn More</button>
+                </div>
+                <div class="hosting-option">
+                    <h4>Virtual Event</h4>
+                    <p>Host online events to reach a global audience</p>
+                    <button class="btn">Explore Options</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="container">
+        <div class="newsletter-signup">
+            <h3>Never Miss an Event</h3>
+            <p>Subscribe to our events newsletter and be the first to know about upcoming activities</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email address">
+                <button class="btn">Subscribe</button>
+            </div>
+            <p class="newsletter-note">We'll only send you event updates. Unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    
+
+    <!-- Event Registration Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Event Registration</h3>
+            <form id="registrationForm">
+                <div class="form-section">
+                    <h4>Event Details</h4>
+                    <div id="modalEventDetails">
+                        <!-- Event details will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h4>Attendee Information</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="regFirstName">First Name *</label>
+                            <input type="text" id="regFirstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regLastName">Last Name *</label>
+                            <input type="text" id="regLastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="regEmail">Email Address *</label>
+                            <input type="email" id="regEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPhone">Phone Number</label>
+                            <input type="tel" id="regPhone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="regOrganization">Organization (Optional)</label>
+                        <input type="text" id="regOrganization">
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h4>Additional Information</h4>
+                    <div class="form-group">
+                        <label for="regQuestions">Questions or Special Requirements</label>
+                        <textarea id="regQuestions" rows="3"
+                            placeholder="Any dietary restrictions, accessibility needs, or questions..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="regNewsletter" checked>
+                            <span class="checkmark"></span>
+                            Subscribe to event updates and future announcements
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Complete Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-toggle">💬</div>
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Foundation Assistant</h3>
+            <button class="close-chatbot">×</button>
+        </div>
+        <div class="chatbot-messages">
+            <!-- Messages will be added here by JavaScript -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Ask about events...">
+            <button class="send-message">Send</button>
+        </div>
+    </div>
+<!-- Footer -->
+<footer style="background-color: #333; color: #fff; padding: 40px 0; text-align: center;">
+    <div class="container">
+        <p>&copy; 2023 Community Empowerment Foundation. All rights reserved.</p>
+        <div style="margin-top: 20px;">
+            <a href="privacy.html" style="color: #fff; margin: 0 10px;">Privacy Policy</a>
+            <a href="terms.html" style="color: #fff; margin: 0 10px;">Terms of Service</a>
+            <a href="contact.html" style="color: #fff; margin: 0 10px;">Contact Us</a>
+        </div>
+    </div>
+</footer>
+    <script src="/script/base.js"></script>
+    <script>
+        // Events-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            // Countdown Timer for Featured Event
+            function updateCountdown() {
+                const eventDate = new Date('2024-03-15T18:00:00').getTime();
+                const now = new Date().getTime();
+                const distance = eventDate - now;
+
+                if (distance < 0) {
+                    document.getElementById('galaCountdown').innerHTML = '<div class="event-ended">Event Completed</div>';
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }
+
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+
+            // Events Filtering
+            const eventsSearch = document.getElementById('eventsSearch');
+            const eventCategory = document.getElementById('eventCategory');
+            const eventDate = document.getElementById('eventDate');
+            const eventLocation = document.getElementById('eventLocation');
+            const eventCards = document.querySelectorAll('.event-card');
+
+            function filterEvents() {
+                const searchTerm = eventsSearch.value.toLowerCase();
+                const category = eventCategory.value;
+                const dateFilter = eventDate.value;
+                const location = eventLocation.value;
+
+                eventCards.forEach(card => {
+                    const matchesSearch = card.querySelector('h3').textContent.toLowerCase().includes(searchTerm) ||
+                        card.querySelector('.event-description').textContent.toLowerCase().includes(searchTerm);
+                    const matchesCategory = category === 'all' || card.getAttribute('data-category') === category;
+                    const matchesLocation = location === 'all' || card.getAttribute('data-location') === location;
+
+                    // Date filtering logic would be more complex in real implementation
+                    const matchesDate = true; // Simplified for demo
+
+                    if (matchesSearch && matchesCategory && matchesLocation && matchesDate) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            eventsSearch.addEventListener('input', filterEvents);
+            eventCategory.addEventListener('change', filterEvents);
+            eventDate.addEventListener('change', filterEvents);
+            eventLocation.addEventListener('change', filterEvents);
+
+            // Event Registration Modal
+            const registrationModal = document.getElementById('registrationModal');
+            const registrationForm = document.getElementById('registrationForm');
+            const closeModal = document.querySelector('.close-modal');
+            const registerButtons = document.querySelectorAll('.event-actions .btn:not(.outline-btn)');
+
+            registerButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const eventCard = this.closest('.event-card');
+                    const eventTitle = eventCard.querySelector('h3').textContent;
+                    const eventDate = eventCard.querySelector('.event-time').textContent;
+                    const eventLocation = eventCard.querySelector('.event-location').textContent;
+
+                    document.getElementById('modalEventDetails').innerHTML = `
+                        <p><strong>${eventTitle}</strong></p>
+                        <p>${eventDate}</p>
+                        <p>${eventLocation}</p>
+                    `;
+
+                    registrationModal.style.display = 'block';
+                });
+            });
+
+            closeModal.addEventListener('click', function () {
+                registrationModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target === registrationModal) {
+                    registrationModal.style.display = 'none';
+                }
+            });
+
+            registrationForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Registration submitted successfully! You will receive a confirmation email shortly.');
+                registrationModal.style.display = 'none';
+                registrationForm.reset();
+            });
+
+            // Share Event Functionality
+            document.getElementById('shareEvent').addEventListener('click', function () {
+                const eventTitle = 'Annual Empowerment Gala 2024';
+                const eventUrl = window.location.href;
+                const shareText = `Join me at ${eventTitle}! ${eventUrl}`;
+
+                if (navigator.share) {
+                    navigator.share({
+                        title: eventTitle,
+                        text: 'Check out this amazing event!',
+                        url: eventUrl
+                    });
+                } else {
+                    navigator.clipboard.writeText(shareText).then(() => {
+                        alert('Event link copied to clipboard!');
+                    });
+                }
+            });
+
+            // Calendar functionality (simplified)
+            const calendar = document.getElementById('eventsCalendar');
+            const currentMonthEl = document.getElementById('currentMonth');
+            const prevMonthBtn = document.getElementById('prevMonth');
+            const nextMonthBtn = document.getElementById('nextMonth');
+
+            let currentDate = new Date();
+
+            function renderCalendar() {
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth();
+
+                currentMonthEl.textContent = currentDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+                // Simplified calendar rendering
+                calendar.innerHTML = `
+                    <div class="calendar-header">
+                        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+                    </div>
+                    <div class="calendar-days">
+                        ${Array.from({ length: 35 }, (_, i) => {
+                    const date = new Date(year, month, i - 5);
+                    const hasEvent = Math.random() > 0.7; // Simulate events
+                    return `
+                                <div class="calendar-day ${hasEvent ? 'has-event' : ''}">
+                                    ${date.getDate()}
+                                    ${hasEvent ? '<div class="event-dot"></div>' : ''}
+                                </div>
+                            `;
+                }).join('')}
+                    </div>
+                `;
+            }
+
+            prevMonthBtn.addEventListener('click', function () {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                renderCalendar();
+            });
+
+            nextMonthBtn.addEventListener('click', function () {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                renderCalendar();
+            });
+
+            renderCalendar();
+
+            // Add to Calendar functionality
+            const addToCalendarButtons = document.querySelectorAll('.outline-btn');
+            addToCalendarButtons.forEach(button => {
+                if (button.textContent.includes('Calendar')) {
+                    button.addEventListener('click', function () {
+                        alert('Event added to your calendar!');
+                    });
+                }
+            });
+
+            // Load More Events
+            document.getElementById('loadMoreEvents').addEventListener('click', function () {
+                // Simulate loading more events
+                setTimeout(() => {
+                    alert('More events loaded!');
+                }, 1000);
+            });
+
+            // Add CSS for additional styles
+            const style = document.createElement('style');
+            style.textContent = `
+                .events-controls {
+                    display: flex;
+                    gap: 20px;
+                    margin: 30px 0;
+                    flex-wrap: wrap;
+                }
+                .events-search {
+                    display: flex;
+                    flex: 1;
+                    min-width: 300px;
+                }
+                .events-search input {
+                    flex: 1;
+                    padding: 12px;
+                    border: 1px solid #ddd;
+                    border-radius: 6px 0 0 6px;
+                }
+                .search-btn {
+                    padding: 12px 20px;
+                    background: #007BFF;
+                    color: white;
+                    border: none;
+                    border-radius: 0 6px 6px 0;
+                    cursor: pointer;
+                }
+                .events-filters {
+                    display: flex;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                }
+                .events-filters select {
+                    padding: 12px;
+                    border: 1px solid #ddd;
+                    border-radius: 6px;
+                    min-width: 150px;
+                }
+                .featured-event {
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    margin: 50px 0;
+                    position: relative;
+                }
+                .featured-badge {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    background: #ffc107;
+                    color: #000;
+                    padding: 8px 15px;
+                    border-radius: 20px;
+                    font-weight: bold;
+                    font-size: 0.9rem;
+                }
+                .featured-event-content {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                    padding: 40px;
+                }
+                .featured-event-info h2 {
+                    font-size: 2.2rem;
+                    margin-bottom: 20px;
+                }
+                .event-date, .event-location {
+                    margin: 10px 0;
+                    font-size: 1.1rem;
+                }
+                .event-description {
+                    margin: 20px 0;
+                    line-height: 1.6;
+                }
+                .event-highlights {
+                    display: flex;
+                    gap: 20px;
+                    margin: 25px 0;
+                    flex-wrap: wrap;
+                }
+                .highlight {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    background: rgba(255,255,255,0.2);
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                }
+                .highlight-icon {
+                    font-size: 1.2rem;
+                }
+                .event-stats {
+                    display: flex;
+                    gap: 30px;
+                    margin: 25px 0;
+                }
+                .event-stats .stat {
+                    text-align: center;
+                }
+                .event-stats strong {
+                    display: block;
+                    font-size: 1.8rem;
+                }
+                .event-actions {
+                    display: flex;
+                    gap: 15px;
+                    margin-top: 25px;
+                    flex-wrap: wrap;
+                }
+                .primary-btn {
+                    background: #ffc107;
+                    color: #000;
+                }
+                .secondary-btn {
+                    background: transparent;
+                    border: 2px solid white;
+                }
+                .outline-btn {
+                    background: transparent;
+                    border: 2px solid rgba(255,255,255,0.5);
+                }
+                .countdown-timer {
+                    background: rgba(0,0,0,0.3);
+                    padding: 25px;
+                    border-radius: 10px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                .countdown {
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    margin-top: 15px;
+                }
+                .countdown-item {
+                    text-align: center;
+                }
+                .countdown-number {
+                    display: block;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    background: rgba(255,255,255,0.2);
+                    padding: 10px;
+                    border-radius: 8px;
+                    min-width: 60px;
+                }
+                .countdown-label {
+                    font-size: 0.8rem;
+                    margin-top: 5px;
+                    display: block;
+                }
+                .calendar-section {
+                    margin: 50px 0;
+                }
+                .calendar-controls {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    margin: 20px 0;
+                }
+                .calendar-nav {
+                    background: none;
+                    border: none;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    color: #007BFF;
+                }
+                .calendar {
+                    border: 1px solid #ddd;
+                    border-radius: 10px;
+                    overflow: hidden;
+                }
+                .calendar-header {
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    background: #f8f9fa;
+                    font-weight: bold;
+                    text-align: center;
+                    padding: 15px 0;
+                }
+                .calendar-days {
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    gap: 1px;
+                    background: #ddd;
+                }
+                .calendar-day {
+                    background: white;
+                    padding: 15px;
+                    text-align: center;
+                    min-height: 80px;
+                    position: relative;
+                }
+                .calendar-day.has-event {
+                    background: #eef3f8;
+                }
+                .event-dot {
+                    position: absolute;
+                    bottom: 5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 8px;
+                    height: 8px;
+                    background: #007BFF;
+                    border-radius: 50%;
+                }
+                .events-list {
+                    display: grid;
+                    gap: 25px;
+                    margin: 30px 0;
+                }
+                .event-card {
+                    display: flex;
+                    gap: 25px;
+                    padding: 25px;
+                    border: 1px solid #e0e0e0;
+                    border-radius: 10px;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                .event-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                }
+                .event-date {
+                    background: #007BFF;
+                    color: white;
+                    padding: 15px;
+                    border-radius: 8px;
+                    text-align: center;
+                    min-width: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .date-day {
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    display: block;
+                }
+                .date-month {
+                    font-size: 0.9rem;
+                    display: block;
+                }
+                .event-content {
+                    flex: 1;
+                }
+                .event-category {
+                    padding: 4px 12px;
+                    border-radius: 15px;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                .event-category.workshop { background: #e3f2fd; color: #1976d2; }
+                .event-category.community { background: #e8f5e8; color: #2e7d32; }
+                .event-category.fundraiser { background: #fff3e0; color: #ef6c00; }
+                .event-category.conference { background: #f3e5f5; color: #7b1fa2; }
+                .event-category.volunteer { background: #e0f2f1; color: #00695c; }
+                .event-card h3 {
+                    margin: 10px 0;
+                }
+                .event-time, .event-location {
+                    margin: 5px 0;
+                    color: #666;
+                }
+                .event-meta {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 15px 0;
+                    color: #666;
+                }
+                .event-actions {
+                    display: flex;
+                    gap: 10px;
+                }
+                .small-btn {
+                    padding: 8px 16px;
+                    font-size: 0.9rem;
+                }
+                .past-events {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 30px;
+                    margin-top: 40px;
+                }
+                .past-event-card {
+                    background: white;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+                .past-event-info {
+                    padding: 20px;
+                }
+                .past-event-info h3 {
+                    margin-bottom: 10px;
+                }
+                .event-stats {
+                    color: #666;
+                    margin: 10px 0;
+                }
+                .event-impact {
+                    font-style: italic;
+                    margin: 15px 0;
+                }
+                .hosting-options {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 30px;
+                    margin: 40px 0;
+                }
+                .hosting-option {
+                    text-align: center;
+                    padding: 30px;
+                    background: rgba(255,255,255,0.1);
+                    border-radius: 10px;
+                }
+                .newsletter-signup {
+                    text-align: center;
+                    padding: 40px;
+                    background: #f8f9fa;
+                    border-radius: 10px;
+                    margin: 50px 0;
+                }
+                .newsletter-form {
+                    display: flex;
+                    gap: 10px;
+                    justify-content: center;
+                    margin: 20px 0;
+                    flex-wrap: wrap;
+                }
+                .newsletter-form input {
+                    padding: 12px;
+                    border: 1px solid #ddd;
+                    border-radius: 6px;
+                    min-width: 250px;
+                }
+                .newsletter-note {
+                    font-size: 0.9rem;
+                    color: #666;
+                }
+                @media (max-width: 768px) {
+                    .featured-event-content {
+                        grid-template-columns: 1fr;
+                    }
+                    .event-card {
+                        flex-direction: column;
+                    }
+                    .event-date {
+                        align-self: flex-start;
+                    }
+                    .events-controls {
+                        flex-direction: column;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+
+</html>

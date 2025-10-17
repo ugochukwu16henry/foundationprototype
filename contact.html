@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Community Empowerment Foundation</title>
+    <link rel="stylesheet" href="/styles/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Empower Foundation</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Toggle mobile menu">☰</button>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you. Reach out with questions, ideas, or to learn more about our work.</p>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="container">
+        <div class="contact-methods">
+            <div class="contact-method">
+                <div class="method-icon">📧</div>
+                <h3>Email Us</h3>
+                <p>Send us a message and we'll respond within 24 hours</p>
+                <a href="mailto:info@empowerfoundation.org" class="contact-link">info@empowerfoundation.org</a>
+            </div>
+            <div class="contact-method">
+                <div class="method-icon">📞</div>
+                <h3>Call Us</h3>
+                <p>Speak directly with our team during business hours</p>
+                <a href="tel:+15551234567" class="contact-link">+1 (555) 123-4567</a>
+            </div>
+            <div class="contact-method">
+                <div class="method-icon">💬</div>
+                <h3>Live Chat</h3>
+                <p>Get instant answers from our support team</p>
+                <button class="btn small-btn" id="startChat">Start Chat</button>
+            </div>
+            <div class="contact-method">
+                <div class="method-icon">📍</div>
+                <h3>Visit Us</h3>
+                <p>Stop by our headquarters during office hours</p>
+                <address class="contact-address">
+                    123 Community Drive<br>
+                    Suite 400<br>
+                    New York, NY 10001
+                </address>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="container">
+        <div class="contact">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-section">
+                        <h3>Your Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <span class="error-message" id="lastNameError"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Inquiry Details</h3>
+                        <div class="form-group">
+                            <label for="inquiryType">Type of Inquiry *</label>
+                            <select id="inquiryType" name="inquiryType" required>
+                                <option value="">Select an option</option>
+                                <option value="general">General Information</option>
+                                <option value="volunteer">Volunteer Opportunities</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="donation">Donation Questions</option>
+                                <option value="programs">Program Information</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message" id="inquiryTypeError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required
+                                placeholder="Please provide details about your inquiry..."></textarea>
+                            <div class="char-counter">
+                                <span id="charCount">0</span>/1000 characters
+                            </div>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for updates and impact stories
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="urgent" name="urgent">
+                                <span class="checkmark"></span>
+                                This is an urgent matter requiring immediate attention
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> and consent to
+                                being contacted
+                            </label>
+                            <span class="error-message" id="termsError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary-btn" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <div class="loading-spinner" style="display: none;"></div>
+                        </button>
+                        <button type="button" class="btn secondary-btn" id="clearForm">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>Office Hours</h3>
+                    <div class="office-hours">
+                        <div class="hour-item">
+                            <span class="day">Monday - Friday</span>
+                            <span class="time">9:00 AM - 6:00 PM EST</span>
+                        </div>
+                        <div class="hour-item">
+                            <span class="day">Saturday</span>
+                            <span class="time">10:00 AM - 2:00 PM EST</span>
+                        </div>
+                        <div class="hour-item">
+                            <span class="day">Sunday</span>
+                            <span class="time">Closed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>Department Contacts</h3>
+                    <div class="department-contacts">
+                        <div class="department">
+                            <h4>General Inquiries</h4>
+                            <p>info@empowerfoundation.org</p>
+                        </div>
+                        <div class="department">
+                            <h4>Volunteer Programs</h4>
+                            <p>volunteer@empowerfoundation.org</p>
+                        </div>
+                        <div class="department">
+                            <h4>Partnerships</h4>
+                            <p>partnerships@empowerfoundation.org</p>
+                        </div>
+                        <div class="department">
+                            <h4>Donations</h4>
+                            <p>donate@empowerfoundation.org</p>
+                        </div>
+                        <div class="department">
+                            <h4>Media Relations</h4>
+                            <p>media@empowerfoundation.org</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>Emergency Contact</h3>
+                    <div class="emergency-contact">
+                        <p>For urgent matters outside business hours:</p>
+                        <a href="tel:+15551234568" class="emergency-phone">+1 (555) 123-4568</a>
+                        <p class="emergency-note">Available 24/7 for critical situations</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>Connect With Us</h3>
+                    <div class="social-connect">
+                        <a href="#" class="social-link facebook">Facebook</a>
+                        <a href="#" class="social-link twitter">Twitter</a>
+                        <a href="#" class="social-link linkedin">LinkedIn</a>
+                        <a href="#" class="social-link instagram">Instagram</a>
+                        <a href="#" class="social-link youtube">YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="impact-stats">
+        <div class="container">
+            <h2>Our Offices</h2>
+            <div class="office-locations">
+                <div class="office-card">
+                    <div class="office-header">
+                        <h3>Headquarters</h3>
+                        <span class="office-badge primary">Main Office</span>
+                    </div>
+                    <div class="office-address">
+                        <p>📍 123 Community Drive, Suite 400</p>
+                        <p>New York, NY 10001</p>
+                        <p>United States</p>
+                    </div>
+                    <div class="office-contact">
+                        <p>📞 +1 (555) 123-4567</p>
+                        <p>📧 nyc@empowerfoundation.org</p>
+                    </div>
+                    <div class="office-hours">
+                        <strong>Hours:</strong> Mon-Fri 9AM-6PM EST
+                    </div>
+                    <button class="btn small-btn outline-btn">Get Directions</button>
+                </div>
+
+                <div class="office-card">
+                    <div class="office-header">
+                        <h3>Regional Office</h3>
+                        <span class="office-badge secondary">West Coast</span>
+                    </div>
+                    <div class="office-address">
+                        <p>📍 456 Hope Avenue, Floor 2</p>
+                        <p>Los Angeles, CA 90210</p>
+                        <p>United States</p>
+                    </div>
+                    <div class="office-contact">
+                        <p>📞 +1 (555) 123-4568</p>
+                        <p>📧 la@empowerfoundation.org</p>
+                    </div>
+                    <div class="office-hours">
+                        <strong>Hours:</strong> Mon-Fri 9AM-5PM PST
+                    </div>
+                    <button class="btn small-btn outline-btn">Get Directions</button>
+                </div>
+
+                <div class="office-card">
+                    <div class="office-header">
+                        <h3>International Office</h3>
+                        <span class="office-badge tertiary">Global Operations</span>
+                    </div>
+                    <div class="office-address">
+                        <p>📍 789 Unity Square</p>
+                        <p>London, SW1A 1AA</p>
+                        <p>United Kingdom</p>
+                    </div>
+                    <div class="office-contact">
+                        <p>📞 +44 20 7946 0958</p>
+                        <p>📧 london@empowerfoundation.org</p>
+                    </div>
+                    <div class="office-hours">
+                        <strong>Hours:</strong> Mon-Fri 9AM-5PM GMT
+                    </div>
+                    <button class="btn small-btn outline-btn">Get Directions</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-section">
+            <div class="faq-categories">
+                <button class="faq-category active" data-category="general">General Questions</button>
+                <button class="faq-category" data-category="volunteer">Volunteering</button>
+                <button class="faq-category" data-category="donation">Donations</button>
+                <button class="faq-category" data-category="partnership">Partnerships</button>
+            </div>
+            <div class="faq-content">
+                <div class="faq-items" data-category="general">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How quickly can I expect a response to my inquiry?
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We typically respond to all inquiries within 24 hours during business days. Urgent
+                                matters are prioritized and usually receive a response within 2-4 hours.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you offer tours of your facilities?
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We offer guided tours of our headquarters every Tuesday and Thursday at 2:00 PM.
+                                Please schedule your visit at least 48 hours in advance by contacting our office.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How can I get involved with your organization?
+                            <span class="faq-toggle">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>There are many ways to get involved! You can volunteer, become a partner, donate, or
+                                participate in our events. Visit our "Get Involved" page to explore all opportunities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-items" data-category="volunteer" style="display: none;">
+                    <!-- Volunteer FAQs would go here -->
+                </div>
+                <!-- Other FAQ categories would follow similar structure -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="container">
+        <div class="map-section">
+            <h2>Find Us</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-overlay">
+                        <h3>Our Headquarters</h3>
+                        <p>123 Community Drive, Suite 400</p>
+                        <p>New York, NY 10001</p>
+                        <button class="btn">Open in Google Maps</button>
+                    </div>
+                    <img src="https://placehold.co/800x400/eef3f8/007BFF?text=Interactive+Map" alt="Map location"
+                        style="width: 100%; border-radius: 10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Whether you want to volunteer, partner with us, or support our mission, we're here to help you get
+                started.</p>
+            <div class="cta-group">
+                <button class="btn" style="background-color: #fff; color: #007BFF;">Become a Volunteer</button>
+                <button class="btn" style="background-color: transparent; border: 2px solid #fff;">Explore
+                    Partnerships</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #333; color: #fff; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2023 Community Empowerment Foundation. All rights reserved.</p>
+            <div style="margin-top: 20px;">
+                <a href="privacy.html" style="color: #fff; margin: 0 10px;">Privacy Policy</a>
+                <a href="terms.html" style="color: #fff; margin: 0 10px;">Terms of Service</a>
+                <a href="contact.html" style="color: #fff; margin: 0 10px;">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">✅</div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out to us. We've received your message and will get back to you within 24 hours.
+            </p>
+            <div class="success-details">
+                <p><strong>Reference ID:</strong> <span id="referenceId">CF-2024-001</span></p>
+                <p>A confirmation email has been sent to <strong id="userEmail">your email address</strong></p>
+            </div>
+            <div class="success-actions">
+                <button class="btn" id="closeSuccess">Close</button>
+                <button class="btn outline-btn" id="newMessage">Send Another Message</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Chat Widget -->
+    <div class="live-chat-widget" id="liveChatWidget">
+        <div class="chat-header">
+            <h4>Live Chat Support</h4>
+            <button class="close-chat" id="closeChat">×</button>
+        </div>
+        <div class="chat-messages">
+            <div class="chat-message bot-message">
+                <p>Hello! How can we help you today?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message...">
+            <button class="send-chat">Send</button>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-toggle">💬</div>
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Foundation Assistant</h3>
+            <button class="close-chatbot">×</button>
+        </div>
+        <div class="chatbot-messages">
+            <!-- Messages will be added here by JavaScript -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Ask about contact information...">
+            <button class="send-message">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            // Form validation and submission
+            const contactForm = document.getElementById('contactForm');
+            const successModal = document.getElementById('successModal');
+            const submitBtn = document.getElementById('submitBtn');
+            const clearBtn = document.getElementById('clearForm');
+            const closeSuccess = document.getElementById('closeSuccess');
+            const newMessageBtn = document.getElementById('newMessage');
+            const charCount = document.getElementById('charCount');
+            const messageInput = document.getElementById('message');
+            const startChatBtn = document.getElementById('startChat');
+            const liveChatWidget = document.getElementById('liveChatWidget');
+            const closeChatBtn = document.getElementById('closeChat');
+
+            // Character counter for message
+            messageInput.addEventListener('input', function () {
+                const count = this.value.length;
+                charCount.textContent = count;
+
+                if (count > 1000) {
+                    this.style.borderColor = '#dc3545';
+                    charCount.style.color = '#dc3545';
+                } else {
+                    this.style.borderColor = '#ccc';
+                    charCount.style.color = '#666';
+                }
+            });
+
+            // Form submission
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                if (validateForm()) {
+                    // Show loading state
+                    submitBtn.disabled = true;
+                    submitBtn.querySelector('.btn-text').textContent = 'Sending...';
+                    submitBtn.querySelector('.loading-spinner').style.display = 'inline-block';
+
+                    // Simulate API call
+                    setTimeout(() => {
+                        showSuccessModal();
+                        resetForm();
+                    }, 2000);
+                }
+            });
+
+            // Clear form
+            clearBtn.addEventListener('click', function () {
+                if (confirm('Are you sure you want to clear the form?')) {
+                    resetForm();
+                }
+            });
+
+            // Success modal actions
+            closeSuccess.addEventListener('click', function () {
+                successModal.style.display = 'none';
+            });
+
+            newMessageBtn.addEventListener('click', function () {
+                successModal.style.display = 'none';
+                contactForm.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Live chat functionality
+            startChatBtn.addEventListener('click', function () {
+                liveChatWidget.style.display = 'block';
+            });
+
+            closeChatBtn.addEventListener('click', function () {
+                liveChatWidget.style.display = 'none';
+            });
+
+            // FAQ functionality
+            const faqCategories = document.querySelectorAll('.faq-category');
+            const faqItems = document.querySelectorAll('.faq-items');
+
+            faqCategories.forEach(category => {
+                category.addEventListener('click', function () {
+                    const categoryType = this.getAttribute('data-category');
+
+                    // Update active category
+                    faqCategories.forEach(cat => cat.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Show relevant FAQ items
+                    faqItems.forEach(item => {
+                        if (item.getAttribute('data-category') === categoryType) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // FAQ accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const answer = this.nextElementSibling;
+                    const toggle = this.querySelector('.faq-toggle');
+
+                    // Toggle answer visibility
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                        toggle.textContent = '+';
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        toggle.textContent = '−';
+                    }
+                });
+            });
+
+            function validateForm() {
+                let isValid = true;
+                const requiredFields = contactForm.querySelectorAll('[required]');
+
+                // Clear previous errors
+                document.querySelectorAll('.error-message').forEach(error => {
+                    error.textContent = '';
+                });
+                document.querySelectorAll('input, select, textarea').forEach(field => {
+                    field.style.borderColor = '#ccc';
+                });
+
+                // Validate required fields
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        const errorId = field.id + 'Error';
+                        const errorElement = document.getElementById(errorId);
+                        if (errorElement) {
+                            errorElement.textContent = 'This field is required';
+                        }
+                        field.style.borderColor = '#dc3545';
+                        isValid = false;
+                    }
+                });
+
+                // Validate email format
+                const emailField = document.getElementById('email');
+                if (emailField.value && !isValidEmail(emailField.value)) {
+                    document.getElementById('emailError').textContent = 'Please enter a valid email address';
+                    emailField.style.borderColor = '#dc3545';
+                    isValid = false;
+                }
+
+                // Validate message length
+                if (messageInput.value.length > 1000) {
+                    document.getElementById('messageError').textContent = 'Message must be 1000 characters or less';
+                    messageInput.style.borderColor = '#dc3545';
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            function showSuccessModal() {
+                const userEmail = document.getElementById('email').value;
+                document.getElementById('userEmail').textContent = userEmail;
+                document.getElementById('referenceId').textContent = 'CF-' + new Date().getFullYear() + '-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+                successModal.style.display = 'block';
+            }
+
+            function resetForm() {
+                contactForm.reset();
+                charCount.textContent = '0';
+                submitBtn.disabled = false;
+                submitBtn.querySelector('.btn-text').textContent = 'Send Message';
+                submitBtn.querySelector('.loading-spinner').style.display = 'none';
+
+                // Clear error styles
+                document.querySelectorAll('.error-message').forEach(error => {
+                    error.textContent = '';
+                });
+                document.querySelectorAll('input, select, textarea').forEach(field => {
+                    field.style.borderColor = '#ccc';
+                });
+            }
+
+            // Add CSS for additional styles
+            const style = document.createElement('style');
+            style.textContent = `
+                .contact-methods {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 30px;
+                    margin: 50px 0;
+                }
+                .contact-method {
+                    text-align: center;
+                    padding: 30px;
+                    background: #f8f9fa;
+                    border-radius: 10px;
+                    transition: transform 0.3s ease;
+                }
+                .contact-method:hover {
+                    transform: translateY(-5px);
+                }
+                .method-icon {
+                    font-size: 3rem;
+                    margin-bottom: 15px;
+                }
+                .contact-link {
+                    display: inline-block;
+                    margin-top: 10px;
+                    color: #007BFF;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+                .contact-link:hover {
+                    text-decoration: underline;
+                }
+                .contact-address {
+                    font-style: normal;
+                    margin-top: 10px;
+                    line-height: 1.5;
+                }
+                .contact {
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    gap: 40px;
+                    margin: 50px 0;
+                }
+                .contact-form-section {
+                    background: white;
+                    padding: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+                }
+                .contact-form-section h2 {
+                    margin-bottom: 30px;
+                    color: #333;
+                }
+                .form-section {
+                    margin-bottom: 30px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #e0e0e0;
+                }
+                .form-section h3 {
+                    margin-bottom: 20px;
+                    color: #555;
+                }
+                .form-row {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px;
+                }
+                .form-group {
+                    margin-bottom: 20px;
+                }
+                .form-group label {
+                    display: block;
+                    margin-bottom: 8px;
+                    font-weight: 600;
+                    color: #333;
+                }
+                .form-group input,
+                .form-group select,
+                .form-group textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                    font-family: inherit;
+                    transition: border-color 0.3s ease;
+                }
+                .form-group input:focus,
+                .form-group select:focus,
+                .form-group textarea:focus {
+                    outline: none;
+                    border-color: #007BFF;
+                    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+                }
+                .error-message {
+                    color: #dc3545;
+                    font-size: 0.85rem;
+                    margin-top: 5px;
+                    display: block;
+                }
+                .char-counter {
+                    text-align: right;
+                    font-size: 0.8rem;
+                    color: #666;
+                    margin-top: 5px;
+                }
+                .checkbox-label {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 10px;
+                    cursor: pointer;
+                    margin: 15px 0;
+                }
+                .checkmark {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid #ccc;
+                    border-radius: 4px;
+                    position: relative;
+                    flex-shrink: 0;
+                    margin-top: 2px;
+                }
+                .checkbox-label input:checked + .checkmark {
+                    background: #007BFF;
+                    border-color: #007BFF;
+                }
+                .checkbox-label input:checked + .checkmark:after {
+                    content: '✓';
+                    color: white;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 12px;
+                }
+                .form-actions {
+                    display: flex;
+                    gap: 15px;
+                    margin-top: 30px;
+                }
+                .primary-btn {
+                    background: #007BFF;
+                    color: white;
+                }
+                .secondary-btn {
+                    background: transparent;
+                    border: 2px solid #007BFF;
+                    color: #007BFF;
+                }
+                .loading-spinner {
+                    width: 16px;
+                    height: 16px;
+                    border: 2px solid transparent;
+                    border-top: 2px solid white;
+                    border-radius: 50%;
+                    animation: spin 1s linear infinite;
+                    display: inline-block;
+                    margin-left: 8px;
+                }
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                .contact-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                }
+                .info-card {
+                    background: white;
+                    padding: 25px;
+                    border-radius: 10px;
+                    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+                }
+                .info-card h3 {
+                    margin-bottom: 20px;
+                    color: #333;
+                }
+                .office-hours {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .hour-item {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 8px 0;
+                    border-bottom: 1px solid #f0f0f0;
+                }
+                .department-contacts {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+                .department h4 {
+                    margin-bottom: 5px;
+                    color: #007BFF;
+                }
+                .emergency-contact {
+                    text-align: center;
+                }
+                .emergency-phone {
+                    display: block;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: #dc3545;
+                    margin: 10px 0;
+                    text-decoration: none;
+                }
+                .emergency-note {
+                    font-size: 0.9rem;
+                    color: #666;
+                }
+                .social-connect {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                }
+                .social-link {
+                    padding: 10px;
+                    border-radius: 6px;
+                    text-decoration: none;
+                    color: #333;
+                    background: #f8f9fa;
+                    text-align: center;
+                    transition: all 0.3s ease;
+                }
+                .social-link:hover {
+                    background: #007BFF;
+                    color: white;
+                    transform: translateY(-2px);
+                }
+                .office-locations {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 30px;
+                    margin-top: 40px;
+                }
+                .office-card {
+                    background: white;
+                    padding: 25px;
+                    border-radius: 10px;
+                    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+                }
+                .office-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 15px;
+                }
+                .office-badge {
+                    padding: 4px 8px;
+                    border-radius: 12px;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                }
+                .office-badge.primary { background: #007BFF; color: white; }
+                .office-badge.secondary { background: #28a745; color: white; }
+                .office-badge.tertiary { background: #6f42c1; color: white; }
+                .office-address, .office-contact {
+                    margin: 15px 0;
+                    line-height: 1.5;
+                }
+                .office-hours {
+                    margin: 15px 0;
+                    color: #666;
+                }
+                .faq-section {
+                    margin: 50px 0;
+                }
+                .faq-categories {
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 30px;
+                    flex-wrap: wrap;
+                }
+                .faq-category {
+                    padding: 12px 20px;
+                    border: 2px solid #e0e0e0;
+                    background: white;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+                .faq-category.active {
+                    background: #007BFF;
+                    color: white;
+                    border-color: #007BFF;
+                }
+                .faq-item {
+                    border: 1px solid #e0e0e0;
+                    border-radius: 8px;
+                    margin: 10px 0;
+                    overflow: hidden;
+                }
+                .faq-question {
+                    width: 100%;
+                    padding: 20px;
+                    text-align: left;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+                .faq-answer {
+                    padding: 0 20px;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease;
+                }
+                .faq-answer p {
+                    margin: 0 0 20px;
+                }
+                .map-section {
+                    margin: 50px 0;
+                }
+                .map-container {
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                }
+                .map-placeholder {
+                    position: relative;
+                }
+                .map-overlay {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    background: white;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+                }
+                .live-chat-widget {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    width: 350px;
+                    height: 500px;
+                    background: white;
+                    border-radius: 10px;
+                    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+                    display: none;
+                    flex-direction: column;
+                    z-index: 1000;
+                }
+                .chat-header {
+                    background: #007BFF;
+                    color: white;
+                    padding: 15px;
+                    border-radius: 10px 10px 0 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .close-chat {
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+                .chat-messages {
+                    flex: 1;
+                    padding: 15px;
+                    overflow-y: auto;
+                }
+                .chat-message {
+                    margin-bottom: 15px;
+                    padding: 10px 15px;
+                    border-radius: 15px;
+                    max-width: 80%;
+                }
+                .bot-message {
+                    background: #f1f1f1;
+                    align-self: flex-start;
+                }
+                .chat-input {
+                    display: flex;
+                    padding: 15px;
+                    border-top: 1px solid #e0e0e0;
+                }
+                .chat-input input {
+                    flex: 1;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 20px;
+                    margin-right: 10px;
+                }
+                .send-chat {
+                    padding: 10px 20px;
+                    background: #007BFF;
+                    color: white;
+                    border: none;
+                    border-radius: 20px;
+                    cursor: pointer;
+                }
+                @media (max-width: 768px) {
+                    .contact {
+                        grid-template-columns: 1fr;
+                    }
+                    .form-row {
+                        grid-template-columns: 1fr;
+                    }
+                    .form-actions {
+                        flex-direction: column;
+                    }
+                    .office-locations {
+                        grid-template-columns: 1fr;
+                    }
+                    .social-connect {
+                        grid-template-columns: 1fr;
+                    }
+                    .live-chat-widget {
+                        width: 90%;
+                        right: 5%;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+
+</html>
