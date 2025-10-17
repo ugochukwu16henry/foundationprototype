@@ -314,23 +314,26 @@ function trackEvent(category, action, label) {
 trackEvent("Navigation", "Page View", window.location.pathname);
 
 // Track CTA clicks - Enhanced version with donate tracking
-document.querySelectorAll(".btn, a, .donate-btn, [href*='donate']").forEach((element) => {
-  element.addEventListener("click", function () {
-    const text = this.textContent.trim() || "Unknown";
-    const href = this.getAttribute("href");
-    
-    // Enhanced donate tracking
-    if (href && href.includes("donate.html") || 
+document
+  .querySelectorAll(".btn, a, .donate-btn, [href*='donate']")
+  .forEach((element) => {
+    element.addEventListener("click", function () {
+      const text = this.textContent.trim() || "Unknown";
+      const href = this.getAttribute("href");
+
+      // Enhanced donate tracking
+      if (
+        (href && href.includes("donate.html")) ||
         this.classList.contains("donate-btn") ||
-        text.toLowerCase().includes("donate")) {
-      
-      trackEvent("Donation", "Donate Intent", {
-        button_text: text,
-        location: this.closest('section')?.className || 'unknown',
-        href: href
-      });
-    } else {
-      trackEvent("CTA", "Click", text);
-    }
+        text.toLowerCase().includes("donate")
+      ) {
+        trackEvent("Donation", "Donate Intent", {
+          button_text: text,
+          location: this.closest("section")?.className || "unknown",
+          href: href,
+        });
+      } else {
+        trackEvent("CTA", "Click", text);
+      }
+    });
   });
-});
