@@ -1,0 +1,307 @@
+/* GLOBAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #222;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: #0055a5;
+}
+
+button,
+.btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+/* HEADER STYLES */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 5%;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+nav a:hover {
+    color: #007BFF;
+    transition: 0.3s;
+}
+
+/* Homepage STYLES */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: #eef3f8;
+    padding: 60px 5%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero .cta-group {
+    display: flex;
+    gap: 16px;
+}
+
+.mission-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px 0;
+}
+
+.featured-programs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.impact-stats {
+    text-align: center;
+    background: #f5f5f5;
+    padding: 50px 0;
+    font-size: 1.2rem;
+}
+
+.testimonials {
+    display: flex;
+    overflow-x: scroll;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.cta-section {
+    background: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* About Us STYLES */
+.about-hero {
+    background: #eef3f8;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.story,
+.mission,
+.vision {
+    margin: 50px 0;
+    line-height: 1.8;
+}
+
+.leadership {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+/* Programs STYLES */
+.programs {
+    padding: 50px 0;
+}
+
+.program-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.program-section:nth-child(even) {
+    background-color: #f8f8f8;
+    padding: 40px;
+}
+
+/* Resources page STYLES */
+.resource-tabs {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 40px;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.download-section button {
+    margin-top: 16px;
+}
+
+/* Get Involved STYLES */
+.get-involved {
+    padding: 60px 0;
+}
+
+.involve-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.trainer-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Donation page STYLES */
+.donation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #f8f8f8;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.giving-levels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+/* Events page STYLES */
+.events-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.event-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Blogpage STYLES */
+.blog-feed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.sidebar {
+    grid-column: span 1;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+/* contact page STYLES */
+.contact {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 50px 0;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* legal page STYLES */
+.legal-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.legal-content {
+    padding: 40px;
+    line-height: 1.8;
+}
+
+
+/* Responsive STYLES */
+@media (max-width: 768px) {
+
+    .hero,
+    .program-section,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-summary,
+    .featured-programs,
+    .leadership,
+    .resources-grid,
+    .giving-levels,
+    .blog-feed {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
