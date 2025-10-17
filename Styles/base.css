@@ -103,7 +103,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    background: #d8dce1;
+    background: #e5e6e8;
     padding: 60px 5%;
     gap: 40px;
 }
