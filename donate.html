@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Community Empowerment Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Empower Foundation</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+                <li><a href="donate.html" class="active">Donate</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Toggle mobile menu">☰</button>
+    </header>
+
+    <!-- Donate Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Support Our Mission</h1>
+            <p>Your donation creates lasting change in communities through education, healthcare, and economic
+                empowerment</p>
+        </div>
+    </section>
+
+    <!-- Impact Calculator -->
+    <section class="container">
+        <div class="impact-calculator">
+            <h2>See Your Impact</h2>
+            <p>Discover how your contribution transforms lives</p>
+            <div class="calculator-container">
+                <div class="amount-slider">
+                    <input type="range" id="donationAmount" min="25" max="1000" value="50" step="25">
+                    <div class="amount-display">
+                        <span id="selectedAmount">$50</span>
+                        <span class="amount-label">per month</span>
+                    </div>
+                </div>
+                <div class="impact-results">
+                    <div class="impact-item">
+                        <span class="impact-icon">📚</span>
+                        <div>
+                            <strong id="booksCount">10</strong>
+                            <span>educational books</span>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-icon">💊</span>
+                        <div>
+                            <strong id="medicalKitsCount">5</strong>
+                            <span>medical kits</span>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <span class="impact-icon">🌱</span>
+                        <div>
+                            <strong id="trainingCount">2</strong>
+                            <span>vocational trainings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giving Levels -->
+    <section class="container">
+        <h2>Choose Your Giving Level</h2>
+        <div class="giving-levels">
+            <div class="giving-option" data-amount="25">
+                <div class="giving-tier">Supporter</div>
+                <div class="giving-amount">$25</div>
+                <p>Provides school supplies for 5 children</p>
+                <ul>
+                    <li>Monthly impact report</li>
+                    <li>Digital thank you certificate</li>
+                </ul>
+                <button class="btn giving-select-btn">Select</button>
+            </div>
+
+            <div class="giving-option featured" data-amount="50">
+                <div class="giving-tier">Champion</div>
+                <div class="giving-amount">$50</div>
+                <p>Sponsors healthcare for 2 families</p>
+                <ul>
+                    <li>All Supporter benefits</li>
+                    <li>Quarterly impact videos</li>
+                    <li>Invitation to webinars</li>
+                </ul>
+                <button class="btn giving-select-btn">Select</button>
+            </div>
+
+            <div class="giving-option" data-amount="100">
+                <div class="giving-tier">Leader</div>
+                <div class="giving-amount">$100</div>
+                <p>Funds small business startup kits</p>
+                <ul>
+                    <li>All Champion benefits</li>
+                    <li>Annual impact report</li>
+                    <li>Recognition in newsletter</li>
+                </ul>
+                <button class="btn giving-select-btn">Select</button>
+            </div>
+        </div>
+
+        <div class="custom-amount-section">
+            <h3>Or enter a custom amount</h3>
+            <div class="custom-amount-input">
+                <span class="currency-symbol">$</span>
+                <input type="number" id="customAmount" placeholder="Enter amount" min="1" max="10000">
+                <select id="donationFrequency">
+                    <option value="one-time">One-time</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="annually">Annually</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Where Your Money Goes -->
+    <section class="impact-stats">
+        <div class="container">
+            <h2>Transparency in Action</h2>
+            <p>See exactly how your donation is allocated</p>
+            <div class="allocation-chart">
+                <div class="allocation-item">
+                    <div class="allocation-bar" style="width: 40%; background: #007BFF;"></div>
+                    <div class="allocation-info">
+                        <span class="allocation-percentage">40%</span>
+                        <span class="allocation-label">Program Implementation</span>
+                        <span class="allocation-desc">Direct program costs and community support</span>
+                    </div>
+                </div>
+                <div class="allocation-item">
+                    <div class="allocation-bar" style="width: 25%; background: #28a745;"></div>
+                    <div class="allocation-info">
+                        <span class="allocation-percentage">25%</span>
+                        <span class="allocation-label">Education Initiatives</span>
+                        <span class="allocation-desc">Schools, scholarships, and learning materials</span>
+                    </div>
+                </div>
+                <div class="allocation-item">
+                    <div class="allocation-bar" style="width: 20%; background: #ffc107;"></div>
+                    <div class="allocation-info">
+                        <span class="allocation-percentage">20%</span>
+                        <span class="allocation-label">Healthcare Services</span>
+                        <span class="allocation-desc">Medical camps, supplies, and health education</span>
+                    </div>
+                </div>
+                <div class="allocation-item">
+                    <div class="allocation-bar" style="width: 10%; background: #dc3545;"></div>
+                    <div class="allocation-info">
+                        <span class="allocation-percentage">10%</span>
+                        <span class="allocation-label">Administrative Costs</span>
+                        <span class="allocation-desc">Essential operational expenses</span>
+                    </div>
+                </div>
+                <div class="allocation-item">
+                    <div class="allocation-bar" style="width: 5%; background: #6f42c1;"></div>
+                    <div class="allocation-info">
+                        <span class="allocation-percentage">5%</span>
+                        <span class="allocation-label">Fundraising</span>
+                        <span class="allocation-desc">Growing our impact through outreach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form -->
+    <section class="container">
+        <div class="donation-form-container">
+            <h2>Make Your Donation</h2>
+            <form id="donationForm" class="donation-form">
+                <div class="form-section">
+                    <h3>Donation Details</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donationType">Donation Type</label>
+                            <select id="donationType" required>
+                                <option value="">Select type</option>
+                                <option value="one-time">One-time Gift</option>
+                                <option value="monthly">Monthly Recurring</option>
+                                <option value="quarterly">Quarterly</option>
+                                <option value="annually">Annually</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="donationAmountInput">Amount ($)</label>
+                            <input type="number" id="donationAmountInput" value="50" min="1" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Payment Information</h3>
+                    <div class="payment-methods">
+                        <div class="payment-method active" data-method="card">
+                            <span>💳 Credit/Debit Card</span>
+                        </div>
+                        <div class="payment-method" data-method="paypal">
+                            <span>📱 PayPal</span>
+                        </div>
+                        <div class="payment-method" data-method="bank">
+                            <span>🏦 Bank Transfer</span>
+                        </div>
+                    </div>
+
+                    <div id="cardPayment" class="payment-details active">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number *</label>
+                                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date *</label>
+                                <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV *</label>
+                                <input type="text" id="cvv" placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cardName">Name on Card *</label>
+                                <input type="text" id="cardName">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="paypalPayment" class="payment-details">
+                        <div class="paypal-info">
+                            <p>You will be redirected to PayPal to complete your donation securely.</p>
+                            <button type="button" class="btn" style="background: #0070ba;">Continue with PayPal</button>
+                        </div>
+                    </div>
+
+                    <div id="bankPayment" class="payment-details">
+                        <div class="bank-info">
+                            <p>For bank transfers, please use the following details:</p>
+                            <div class="bank-details">
+                                <p><strong>Bank:</strong> Global Community Bank</p>
+                                <p><strong>Account Name:</strong> Community Empowerment Foundation</p>
+                                <p><strong>Account Number:</strong> 1234 5678 9012</p>
+                                <p><strong>Routing Number:</strong> 021000021</p>
+                                <p><strong>SWIFT:</strong> GCBIUS33</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" checked>
+                            <span class="checkmark"></span>
+                            Send me updates about how my donation is making an impact
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="anonymous">
+                            <span class="checkmark"></span>
+                            Make my donation anonymous
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy
+                                Policy</a>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn submit-donation">Donate Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Other Ways to Give -->
+    <section class="container">
+        <h2>Other Ways to Give</h2>
+        <div class="alternative-giving">
+            <div class="giving-method">
+                <div class="method-icon">🏢</div>
+                <h3>Corporate Matching</h3>
+                <p>Double your impact through your employer's matching gift program</p>
+                <button class="btn">Learn More</button>
+            </div>
+            <div class="giving-method">
+                <div class="method-icon">📜</div>
+                <h3>Planned Giving</h3>
+                <p>Include us in your estate planning for lasting legacy</p>
+                <button class="btn">Explore Options</button>
+            </div>
+            <div class="giving-method">
+                <div class="method-icon">🎁</div>
+                <h3>In-Kind Donations</h3>
+                <p>Donate goods, services, or expertise</p>
+                <button class="btn">View Needs</button>
+            </div>
+            <div class="giving-method">
+                <div class="method-icon">🌍</div>
+                <h3>Workplace Giving</h3>
+                <p>Set up payroll deductions or workplace campaigns</p>
+                <button class="btn">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="impact-stats">
+        <div class="container">
+            <h2>Your Trust Matters</h2>
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <div class="trust-icon">⭐</div>
+                    <div class="trust-info">
+                        <strong>4.9/5 Rating</strong>
+                        <span>Charity Navigator</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🔒</div>
+                    <div class="trust-info">
+                        <strong>SSL Secured</strong>
+                        <span>256-bit Encryption</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">📊</div>
+                    <div class="trust-info">
+                        <strong>90% Program Spend</strong>
+                        <span>Financial Transparency</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">💝</div>
+                    <div class="trust-info">
+                        <strong>Tax Deductible</strong>
+                        <span>501(c)(3) Organization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #333; color: #fff; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2023 Community Empowerment Foundation. All rights reserved.</p>
+            <div style="margin-top: 20px;">
+                <a href="privacy.html" style="color: #fff; margin: 0 10px;">Privacy Policy</a>
+                <a href="terms.html" style="color: #fff; margin: 0 10px;">Terms of Service</a>
+                <a href="contact.html" style="color: #fff; margin: 0 10px;">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Donation Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">🎉</div>
+            <h3>Thank You for Your Generosity!</h3>
+            <p>Your donation of <strong id="confirmedAmount">$50</strong> will help transform lives in communities
+                worldwide.</p>
+            <div class="success-details">
+                <p>A confirmation email has been sent to <strong id="confirmedEmail">your email</strong></p>
+                <p>You'll receive your impact report in the next 48 hours</p>
+            </div>
+            <div class="success-actions">
+                <button class="btn" id="shareBtn">Share My Impact</button>
+                <button class="btn" style="background: transparent; border: 2px solid #007BFF; color: #007BFF;"
+                    id="closeSuccess">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-toggle">💬</div>
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Foundation Assistant</h3>
+            <button class="close-chatbot">×</button>
+        </div>
+        <div class="chatbot-messages">
+            <!-- Messages will be added here by JavaScript -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Ask about donations...">
+            <button class="send-message">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Donation-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            // Impact Calculator
+            const amountSlider = document.getElementById('donationAmount');
+            const selectedAmount = document.getElementById('selectedAmount');
+            const donationAmountInput = document.getElementById('donationAmountInput');
+            const customAmountInput = document.getElementById('customAmount');
+            const frequencySelect = document.getElementById('donationFrequency');
+
+            // Impact elements
+            const booksCount = document.getElementById('booksCount');
+            const medicalKitsCount = document.getElementById('medicalKitsCount');
+            const trainingCount = document.getElementById('trainingCount');
+
+            // Update impact calculator
+            function updateImpact(amount) {
+                selectedAmount.textContent = `$${amount}`;
+                donationAmountInput.value = amount;
+
+                // Calculate impacts based on amount
+                booksCount.textContent = Math.floor(amount / 5);
+                medicalKitsCount.textContent = Math.floor(amount / 10);
+                trainingCount.textContent = Math.floor(amount / 25);
+            }
+
+            // Slider event
+            amountSlider.addEventListener('input', function () {
+                updateImpact(this.value);
+            });
+
+            // Custom amount input
+            customAmountInput.addEventListener('input', function () {
+                if (this.value) {
+                    updateImpact(this.value);
+                    amountSlider.value = this.value;
+                }
+            });
+
+            // Giving level selection
+            const givingOptions = document.querySelectorAll('.giving-option');
+            const givingSelectBtns = document.querySelectorAll('.giving-select-btn');
+
+            givingSelectBtns.forEach((btn, index) => {
+                btn.addEventListener('click', function () {
+                    const amount = givingOptions[index].getAttribute('data-amount');
+                    updateImpact(amount);
+                    amountSlider.value = amount;
+
+                    // Scroll to donation form
+                    document.getElementById('donationForm').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Payment method selection
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            const paymentDetails = document.querySelectorAll('.payment-details');
+
+            paymentMethods.forEach(method => {
+                method.addEventListener('click', function () {
+                    const methodType = this.getAttribute('data-method');
+
+                    // Update active states
+                    paymentMethods.forEach(m => m.classList.remove('active'));
+                    paymentDetails.forEach(d => d.classList.remove('active'));
+
+                    this.classList.add('active');
+                    document.getElementById(`${methodType}Payment`).classList.add('active');
+                });
+            });
+
+            // Form submission
+            const donationForm = document.getElementById('donationForm');
+            const successModal = document.getElementById('successModal');
+            const confirmedAmount = document.getElementById('confirmedAmount');
+            const confirmedEmail = document.getElementById('confirmedEmail');
+            const closeSuccess = document.getElementById('closeSuccess');
+            const shareBtn = document.getElementById('shareBtn');
+
+            donationForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                if (validateDonationForm()) {
+                    // Show success modal
+                    confirmedAmount.textContent = `$${donationAmountInput.value}`;
+                    confirmedEmail.textContent = document.getElementById('email').value;
+                    successModal.style.display = 'block';
+
+                    // Track donation (in real implementation, this would go to analytics)
+                    trackDonation({
+                        amount: donationAmountInput.value,
+                        frequency: document.getElementById('donationType').value,
+                        method: document.querySelector('.payment-method.active').getAttribute('data-method')
+                    });
+                }
+            });
+
+            // Close success modal
+            closeSuccess.addEventListener('click', function () {
+                successModal.style.display = 'none';
+                donationForm.reset();
+                updateImpact(50); // Reset to default
+            });
+
+            // Share impact
+            shareBtn.addEventListener('click', function () {
+                const shareText = `I just donated $${donationAmountInput.value} to support community empowerment! Join me in making a difference.`;
+
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'I Supported Community Empowerment',
+                        text: shareText,
+                        url: window.location.href
+                    });
+                } else {
+                    // Fallback: copy to clipboard
+                    navigator.clipboard.writeText(shareText).then(() => {
+                        alert('Impact message copied to clipboard!');
+                    });
+                }
+            });
+
+            // Card number formatting
+            const cardNumberInput = document.getElementById('cardNumber');
+            cardNumberInput.addEventListener('input', function () {
+                let value = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+                let matches = value.match(/\d{4,16}/g);
+                let match = matches && matches[0] || '';
+                let parts = [];
+
+                for (let i = 0; i < match.length; i += 4) {
+                    parts.push(match.substring(i, i + 4));
+                }
+
+                if (parts.length) {
+                    this.value = parts.join(' ');
+                }
+            });
+
+            // Expiry date formatting
+            const expiryInput = document.getElementById('expiryDate');
+            expiryInput.addEventListener('input', function () {
+                let value = this.value.replace(/\D/g, '');
+                if (value.length >= 2) {
+                    this.value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                }
+            });
+
+            function validateDonationForm() {
+                let isValid = true;
+                const requiredFields = donationForm.querySelectorAll('[required]');
+
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.style.borderColor = '#dc3545';
+                        isValid = false;
+                    } else {
+                        field.style.borderColor = '#ccc';
+                    }
+                });
+
+                // Additional validation for card details if card payment is selected
+                if (document.querySelector('.payment-method.active').getAttribute('data-method') === 'card') {
+                    const cardNumber = document.getElementById('cardNumber').value.replace(/\s/g, '');
+                    const expiry = document.getElementById('expiryDate').value;
+                    const cvv = document.getElementById('cvv').value;
+
+                    if (cardNumber.length !== 16) {
+                        alert('Please enter a valid 16-digit card number');
+                        isValid = false;
+                    }
+
+                    if (!expiry.match(/^(0[1-9]|1[0-2])\/([0-9]{2})$/)) {
+                        alert('Please enter a valid expiry date (MM/YY)');
+                        isValid = false;
+                    }
+
+                    if (cvv.length < 3 || cvv.length > 4) {
+                        alert('Please enter a valid CVV');
+                        isValid = false;
+                    }
+                }
+
+                return isValid;
+            }
+
+            function trackDonation(donationData) {
+                // In real implementation, this would send to analytics
+                console.log('Donation tracked:', donationData);
+
+                // Example: Send to Google Analytics
+                if (window.gtag) {
+                    gtag('event', 'donation', {
+                        'event_category': 'donations',
+                        'event_label': `${donationData.frequency}_${donationData.method}`,
+                        'value': donationData.amount
+                    });
+                }
+            }
+
+            // Initialize impact calculator
+            updateImpact(50);
+
+            // Add CSS for additional styles
+            const style = document.createElement('style');
+            style.textContent = `
+                .impact-calculator {
+                    text-align: center;
+                    margin: 50px 0;
+                }
+                .calculator-container {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    padding: 30px;
+                    background: #f8f9fa;
+                    border-radius: 10px;
+                }
+                .amount-slider {
+                    margin: 30px 0;
+                }
+                .amount-slider input {
+                    width: 100%;
+                    margin: 20px 0;
+                }
+                .amount-display {
+                    text-align: center;
+                }
+                #selectedAmount {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    color: #007BFF;
+                    display: block;
+                }
+                .amount-label {
+                    color: #666;
+                }
+                .impact-results {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                    gap: 20px;
+                    margin-top: 30px;
+                }
+                .impact-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 15px;
+                    background: white;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                .impact-icon {
+                    font-size: 2rem;
+                }
+                .giving-option {
+                    padding: 30px;
+                    border: 2px solid #e0e0e0;
+                    border-radius: 10px;
+                    text-align: center;
+                    transition: all 0.3s ease;
+                }
+                .giving-option.featured {
+                    border-color: #007BFF;
+                    transform: scale(1.05);
+                    box-shadow: 0 5px 15px rgba(0,123,255,0.2);
+                }
+                .giving-option:hover {
+                    border-color: #007BFF;
+                }
+                .giving-tier {
+                    font-weight: bold;
+                    color: #007BFF;
+                    margin-bottom: 10px;
+                }
+                .giving-amount {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    margin: 15px 0;
+                }
+                .giving-option ul {
+                    text-align: left;
+                    margin: 20px 0;
+                    padding-left: 20px;
+                }
+                .giving-option li {
+                    margin: 8px 0;
+                }
+                .custom-amount-section {
+                    text-align: center;
+                    margin: 40px 0;
+                }
+                .custom-amount-input {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 15px;
+                    margin: 20px 0;
+                    flex-wrap: wrap;
+                }
+                .currency-symbol {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+                #customAmount {
+                    padding: 12px;
+                    border: 2px solid #007BFF;
+                    border-radius: 6px;
+                    font-size: 1.2rem;
+                    width: 150px;
+                    text-align: center;
+                }
+                .allocation-chart {
+                    max-width: 800px;
+                    margin: 0 auto;
+                }
+                .allocation-item {
+                    display: flex;
+                    align-items: center;
+                    margin: 20px 0;
+                    gap: 20px;
+                }
+                .allocation-bar {
+                    height: 30px;
+                    border-radius: 15px;
+                    min-width: 50px;
+                    transition: width 0.5s ease;
+                }
+                .allocation-info {
+                    flex: 1;
+                }
+                .allocation-percentage {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+                .allocation-label {
+                    display: block;
+                    font-weight: 600;
+                }
+                .allocation-desc {
+                    font-size: 0.9rem;
+                    color: #666;
+                }
+                .donation-form-container {
+                    max-width: 800px;
+                    margin: 0 auto;
+                }
+                .form-section {
+                    margin: 30px 0;
+                    padding: 25px;
+                    border: 1px solid #e0e0e0;
+                    border-radius: 8px;
+                }
+                .form-row {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px;
+                }
+                @media (max-width: 768px) {
+                    .form-row {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                .payment-methods {
+                    display: flex;
+                    gap: 10px;
+                    margin: 20px 0;
+                    flex-wrap: wrap;
+                }
+                .payment-method {
+                    padding: 15px 20px;
+                    border: 2px solid #e0e0e0;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    flex: 1;
+                    text-align: center;
+                }
+                .payment-method.active {
+                    border-color: #007BFF;
+                    background: #eef3f8;
+                }
+                .payment-details {
+                    display: none;
+                }
+                .payment-details.active {
+                    display: block;
+                }
+                .checkbox-label {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 10px;
+                    cursor: pointer;
+                    margin: 15px 0;
+                }
+                .checkmark {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid #ccc;
+                    border-radius: 4px;
+                    position: relative;
+                    flex-shrink: 0;
+                }
+                .checkbox-label input:checked + .checkmark {
+                    background: #007BFF;
+                    border-color: #007BFF;
+                }
+                .checkbox-label input:checked + .checkmark:after {
+                    content: '✓';
+                    color: white;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .alternative-giving {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 30px;
+                    margin: 40px 0;
+                }
+                .giving-method {
+                    text-align: center;
+                    padding: 30px 20px;
+                    border: 1px solid #e0e0e0;
+                    border-radius: 10px;
+                    transition: transform 0.3s ease;
+                }
+                .giving-method:hover {
+                    transform: translateY(-5px);
+                }
+                .method-icon {
+                    font-size: 3rem;
+                    margin-bottom: 15px;
+                }
+                .trust-indicators {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 30px;
+                    margin-top: 40px;
+                }
+                .trust-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    padding: 20px;
+                    background: white;
+                    border-radius: 8px;
+                }
+                .trust-icon {
+                    font-size: 2.5rem;
+                }
+                .success-modal {
+                    text-align: center;
+                    max-width: 500px;
+                }
+                .success-icon {
+                    font-size: 4rem;
+                    margin-bottom: 20px;
+                }
+                .success-details {
+                    background: #f8f9fa;
+                    padding: 20px;
+                    border-radius: 8px;
+                    margin: 20px 0;
+                }
+                .success-actions {
+                    display: flex;
+                    gap: 15px;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+                input[type="range"] {
+                    -webkit-appearance: none;
+                    width: 100%;
+                    height: 8px;
+                    background: #e0e0e0;
+                    border-radius: 4px;
+                    outline: none;
+                }
+                input[type="range"]::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    width: 25px;
+                    height: 25px;
+                    background: #007BFF;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+
+</html>
