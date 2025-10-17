@@ -92,7 +92,7 @@ nav a:hover {
 
 .mobile-menu-btn {
     display: none;
-    background: none;
+    background: rgb(11, 7, 7);
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
