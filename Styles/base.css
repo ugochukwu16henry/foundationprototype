@@ -667,12 +667,7 @@ form textarea {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
+    
     .logo {
         font-size: 1.5rem;
     }
