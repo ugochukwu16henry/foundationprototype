@@ -673,4 +673,10 @@ form textarea {
         height: 40px;
         width: auto;
     }
+
+    .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3498db;
+    }
 }
