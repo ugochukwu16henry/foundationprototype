@@ -668,7 +668,9 @@ form textarea {
 /* Mobile Responsive */
 @media (max-width: 768px) {
     
-    .logo {
+    .logo-image{
         font-size: 1.5rem;
+        height: 40px;
+        width: auto;
     }
 }
